@@ -1,0 +1,56 @@
+/* رابط المشرف */
+.admin-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background: rgba(5, 66, 49, 0.9);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.admin-link:hover {
+    background: rgba(15, 116, 91, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.admin-link::before {
+    content: "⚙️ ";
+    margin-left: 5px;
+}
+
+/* إخفاء الرابط في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .admin-link {
+        top: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* تأثير الظهور */
+.admin-link.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

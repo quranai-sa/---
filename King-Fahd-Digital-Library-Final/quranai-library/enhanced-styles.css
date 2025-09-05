@@ -1,0 +1,265 @@
+/* ملف الأنماط المحسن لمكتبة مجمع الملك فهد الرقمية */
+
+/* إصلاح الشعار */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo-image {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(5, 66, 49, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(5, 66, 49, 0.3);
+}
+
+/* تنسيق الإحصائيات */
+.statistics-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 3rem 0;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    border-color: #054231;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #054231;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #054231, #0F745B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* قسم التواصل */
+.contact-section {
+    background: linear-gradient(135deg, #054231 0%, #0F745B 100%);
+    color: white;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.1;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.contact-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #C5A861;
+}
+
+.contact-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* برامج التواصل الاجتماعي */
+.social-media-section {
+    background: #F9F9F9;
+    padding: 3rem 0;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.social-link:hover::before {
+    transform: translateX(100%);
+}
+
+.social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    position: relative;
+}
+
+/* تحسين النصوص */
+.text-updated {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحسين الألوان */
+:root {
+    --brand-green-dark: #054231;
+    --brand-green-light: #0F745B;
+    --brand-gold: #C5A861;
+    --brand-bg: #F9F9F9;
+    --brand-white: #FFFFFF;
+    --brand-gray: #6B7280;
+    --brand-light-gray: #F3F4F6;
+}
+
+/* تحسين الاستجابة */
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .contact-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .social-link {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .social-link svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* تحسين الطباعة */
+@media print {
+    .social-media-section,
+    .contact-section {
+        display: none;
+    }
+    
+    .stat-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* تحسين إمكانية الوصول */
+.social-link:focus,
+.contact-item:focus {
+    outline: 3px solid #C5A861;
+    outline-offset: 2px;
+}
+
+/* تحسين الأداء */
+.stat-card,
+.contact-item,
+.social-link {
+    will-change: transform;
+}
+
+/* تحسين الخطوط العربية */
+.arabic-text {
+    font-family: 'Cairo', 'Arial', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+/* تحسين التدرجات */
+.gradient-text {
+    background: linear-gradient(135deg, #054231, #0F745B, #C5A861);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* تحسين الظلال */
+.shadow-brand {
+    box-shadow: 0 10px 30px rgba(5, 66, 49, 0.2);
+}
+
+.shadow-brand-hover:hover {
+    box-shadow: 0 20px 40px rgba(5, 66, 49, 0.3);
+}
